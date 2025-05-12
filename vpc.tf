@@ -25,3 +25,23 @@ resource "aws_subnet" "private_subnet" {
     Name = "private_subnet"
   }
 }
+resource "aws_instance" "mumbai_server" {
+  ami           = "ami-078264b8ba71bc45e"
+  key_name      = "newmumbai"
+  instance_type = "t2.micro"
+  count = 1
+  subnet_id     = aws_subnet.public_subnet.id #  Launch in the public subnet
+
+  tags = {
+    Name = "radhe_server-1"
+  }
+  resource "aws_instance" "mumbai_server" {
+  ami           = "ami-078264b8ba71bc45e"
+  key_name      = "newmumbai"
+  instance_type = "t2.micro"
+  count = 1
+  subnet_id     = aws_subnet.private_subnet.id #  Launch in the public subnet
+
+  tags = {
+    Name = "radhe_server-2"
+  }
