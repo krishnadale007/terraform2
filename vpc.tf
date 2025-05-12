@@ -49,11 +49,11 @@ resource "aws_instance" "beed_server" {
   }
  }
 output "created_server_public_ip" {
-  value = aws_instance.beed_server.public_ip
+  value = aws_instance.beed_server[0].public_ip
 }
 
 output "created_server_private_ip" {
-  value = aws_instance.pune_server.private_ip
+  value = aws_instance.pune_server[0].private_ip
 }
 
 output "vpc_id" {
