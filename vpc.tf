@@ -25,7 +25,7 @@ resource "aws_subnet" "private_subnet" {
     Name = "private_subnet"
   }
 }
-resource "aws_instance" "mumbai_server" {
+resource "aws_instance" "mumbaii_server" {
   ami           = "ami-078264b8ba71bc45e"
   key_name      = "newmumbai"
   instance_type = "t2.micro"
@@ -36,7 +36,7 @@ resource "aws_instance" "mumbai_server" {
     Name = "radhe_server-1"
   }
 }
-  resource "aws_instance" "mumbai_server" {
+  resource "aws_instance" "mumbaii_server" {
   ami           = "ami-078264b8ba71bc45e"
   key_name      = "newmumbai"
   instance_type = "t2.micro"
