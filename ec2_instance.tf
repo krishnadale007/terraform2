@@ -9,7 +9,7 @@ resource "aws_instance" "mumbai_server" {
   subnet_id     = "subnet-0e80b6ffb5e18b2a4" # Replace with your subnet ID
 
 tags = {
-    Name = "riddhikrishna_server"
+    Name = "riddhi_server"
   }
 }
 
