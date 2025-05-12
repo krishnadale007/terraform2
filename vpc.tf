@@ -35,6 +35,7 @@ resource "aws_instance" "mumbai_server-1" {
   tags = {
     Name = "radhe_server-1"
   }
+}
   resource "aws_instance" "mumbai_server-2" {
   ami           = "ami-078264b8ba71bc45e"
   key_name      = "newmumbai"
@@ -44,4 +45,5 @@ resource "aws_instance" "mumbai_server-1" {
 
   tags = {
     Name = "radhe_server-2"
+  }
   }
